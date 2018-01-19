@@ -65,3 +65,7 @@ FROM table_name;
 
 SELECT name, genre
 FROM movies;
+
+
+SELECT name AS 'Movies'
+FROM movies;
