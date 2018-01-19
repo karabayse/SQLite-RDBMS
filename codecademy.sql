@@ -36,3 +36,19 @@ SELECT * FROM celebs;
 ALTER TABLE celebs ADD COLUMN twitter_handle TEXT;
 
 SELECT * FROM celebs;
+
+
+UPDATE celebs
+SET twitter_handle = '@taylorswift13'
+WHERE id = 4;
+
+SELECT * FROM celebs;
+
+
+UPDATE celebs
+SET twitter_handle = '@taylorswift13'
+WHERE id = 4;
+
+DELETE FROM celebs WHERE twitter_handle IS NULL;
+
+SELECT * FROM celebs;
