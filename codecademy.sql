@@ -52,3 +52,16 @@ WHERE id = 4;
 DELETE FROM celebs WHERE twitter_handle IS NULL;
 
 SELECT * FROM celebs;
+
+
+CREATE TABLE awards (
+  id INTEGER PRIMARY KEY,
+  recipient TEXT NOT NULL,
+  award_name TEXT DEFAULT "Grammy");
+
+
+SELECT column1, column2
+FROM table_name;
+
+SELECT name, genre
+FROM movies;
