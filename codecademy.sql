@@ -69,3 +69,13 @@ FROM movies;
 
 SELECT name AS 'Movies'
 FROM movies;
+
+
+SELECT DISTINCT tools
+FROM inventory;
+
+SELECT DISTINCT genre
+FROM movies;
+
+SELECT DISTINCT year
+FROM movies;
