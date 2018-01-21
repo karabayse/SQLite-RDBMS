@@ -79,3 +79,16 @@ FROM movies;
 
 SELECT DISTINCT year
 FROM movies;
+
+
+SELECT *
+FROM movies
+WHERE imdb_rating > 8;
+
+SELECT *
+FROM movies
+WHERE imdb_rating < 5;
+
+SELECT *
+FROM movies
+WHERE year > 2014;
