@@ -190,3 +190,14 @@ ORDER BY name;
 SELECT name, year, imdb_rating
 FROM movies
 ORDER BY imdb_rating DESC;
+
+
+-- LIMIT
+SELECT *
+FROM movies
+LIMIT 5;
+
+SELECT *
+FROM movies
+ORDER BY imdb_rating DESC
+LIMIT 3;
