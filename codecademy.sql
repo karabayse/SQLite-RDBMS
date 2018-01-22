@@ -60,6 +60,7 @@ CREATE TABLE awards (
   award_name TEXT DEFAULT "Grammy");
 
 
+-- SELECT
 SELECT column1, column2
 FROM table_name;
 
@@ -67,10 +68,12 @@ SELECT name, genre
 FROM movies;
 
 
+-- AS keyword allows you to rename a column or table using an alias
 SELECT name AS 'Movies'
 FROM movies;
 
 
+-- DISTINCT
 SELECT DISTINCT tools
 FROM inventory;
 
@@ -81,6 +84,7 @@ SELECT DISTINCT year
 FROM movies;
 
 
+-- operators
 SELECT *
 FROM movies
 WHERE imdb_rating > 8;
@@ -92,3 +96,20 @@ WHERE imdb_rating < 5;
 SELECT *
 FROM movies
 WHERE year > 2014;
+
+
+-- LIKE
+SELECT *
+FROM movies
+WHERE name LIKE 'Se_en';
+
+-- LIKE: % operator used after the 'A' to find all words that being with 'A'
+SELECT *
+FROM movies
+WHERE name LIKE 'A%';
+
+-- LIKE: % operator used after before and after 'man' to determine words
+-- containing 'man'
+SELECT *
+FROM movies
+WHERE name LIKE '%man%';
