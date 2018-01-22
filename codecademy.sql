@@ -151,3 +151,15 @@ SELECT *
 FROM movies
 WHERE year < 1985
    AND genre = 'horror';
+
+
+-- OR
+SELECT *
+FROM movies
+WHERE year > 2014
+   OR genre = 'action';
+
+SELECT *
+FROM movies
+WHERE genre = 'romance'
+   OR genre = 'comedy';
