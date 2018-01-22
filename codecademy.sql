@@ -134,3 +134,20 @@ WHERE name BETWEEN 'A' AND 'J';
 SELECT *
 FROM movies
 WHERE year BETWEEN 1990 AND 1999;
+
+
+-- AND  -->  combine multiple conditions in a WHERE clause
+SELECT *
+FROM movies
+WHERE year BETWEEN 1990 AND 1999
+   AND genre = 'romance';
+
+SELECT *
+FROM movies
+WHERE year BETWEEN 1970 AND 1979
+   AND imdb_rating > 8;
+
+SELECT *
+FROM movies
+WHERE year < 1985
+   AND genre = 'horror';
