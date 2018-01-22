@@ -120,7 +120,17 @@ SELECT name
 FROM movies
 WHERE imdb_rating IS NULL;
 
--- IS NOT NULL  -->  filter for all movies with an IMDb rating 
+-- IS NOT NULL  -->  filter for all movies with an IMDb rating
 SELECT name
 FROM movies
 WHERE imdb_rating IS NOT NULL;
+
+
+-- BETWEEN  -->  filter result set with a certain range
+SELECT *
+FROM movies
+WHERE name BETWEEN 'A' AND 'J';
+
+SELECT *
+FROM movies
+WHERE year BETWEEN 1990 AND 1999;
