@@ -113,3 +113,14 @@ WHERE name LIKE 'A%';
 SELECT *
 FROM movies
 WHERE name LIKE '%man%';
+
+
+-- IS NULL  --> missing/unknown values are indicated by NULL
+SELECT name
+FROM movies
+WHERE imdb_rating IS NULL;
+
+-- IS NOT NULL  -->  filter for all movies with an IMDb rating 
+SELECT name
+FROM movies
+WHERE imdb_rating IS NOT NULL;
