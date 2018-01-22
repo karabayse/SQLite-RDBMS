@@ -205,9 +205,24 @@ LIMIT 3;
 
 -- CASE
 SELECT name,
+ CASE
+  WHEN imdb_rating > 7 THEN 'Good'
+  WHEN imdb_rating > 5 THEN 'Okay'
+ END
+FROM movies;
+
+SELECT name,
 	CASE
   	WHEN genre = 'romance' THEN 'fun'
     WHEN genre = 'comedy' THEN 'fun'
     ELSE 'serious'
   END AS 'mood'
 FROM movies;
+
+
+-- AGGREGATE FUNCTIONS
+
+-- COUNT
+SELECT COUNT(*)
+FROM fake_apps
+WHERE price = 0;
