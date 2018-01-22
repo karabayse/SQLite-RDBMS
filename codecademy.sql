@@ -163,3 +163,30 @@ SELECT *
 FROM movies
 WHERE genre = 'romance'
    OR genre = 'comedy';
+
+
+-- ORDER BY
+-- ORDER BY name  -->  sorts everythingg alphabetically
+SELECT *
+FROM movies
+ORDER BY name;
+
+-- ASC  -->  sort in ascending order
+SELECT *
+FROM movies
+WHERE imdb_rating > 8
+ORDER BY year ASC;
+
+-- DESC  -->  sort in descending order
+SELECT *
+FROM movies
+WHERE imdb_rating > 8
+ORDER BY year DESC;
+
+SELECT name, year
+FROM movies
+ORDER BY name;
+
+SELECT name, year, imdb_rating
+FROM movies
+ORDER BY imdb_rating DESC;
