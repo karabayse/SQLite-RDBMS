@@ -247,3 +247,18 @@ FROM fake_apps;
 
 SELECT AVG(price)
 FROM fake_apps;
+
+
+-- ROUND
+-- we pass the column 'price' and integer '0' as arguments
+-- SQL rounds the values in the column to zero decimal places in the output
+SELECT ROUND(price, 0)
+FROM fake_apps;
+
+-- return the 'name' column and a rounded 'price' column
+SELECT name, ROUND(price, 0)
+FROM fake_apps;
+
+-- get the average price of an app and round to 2 decimal places
+SELECT ROUND(AVG(price), 2)
+FROM fake_apps;
