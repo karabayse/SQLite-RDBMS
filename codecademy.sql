@@ -231,3 +231,11 @@ WHERE price = 0;
 -- SUM
 SELECT SUM(downloads)
 FROM fake_apps;
+
+
+-- MAX / MIN
+SELECT MAX(downloads)
+FROM fake_apps;
+
+SELECT MIN(downloads)
+FROM fake_apps;
