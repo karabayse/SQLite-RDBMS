@@ -262,3 +262,23 @@ FROM fake_apps;
 -- get the average price of an app and round to 2 decimal places
 SELECT ROUND(AVG(price), 2)
 FROM fake_apps;
+
+
+-- GROUP BY
+-- used below to determine the mean/average ratings for all movies each year
+SELECT year,
+   AVG(imdb_rating)
+FROM movies
+GROUP BY year
+ORDER BY year;
+
+-- used below to count the total number of apps for each price in the table
+SELECT price, COUNT(*)
+FROM fake_apps
+GROUP BY price;
+
+-- calculates the total number of downloads for each category
+SELECT category,
+	SUM(downloads)
+FROM fake_apps
+GROUP BY category;
