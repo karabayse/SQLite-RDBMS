@@ -282,3 +282,29 @@ SELECT category,
 	SUM(downloads)
 FROM fake_apps
 GROUP BY category;
+
+-- the following queries are equivalent:
+SELECT ROUND(imdb_rating),
+   COUNT(name)
+FROM movies
+GROUP BY ROUND(imdb_rating)
+ORDER BY ROUND(imdb_rating);
+
+SELECT ROUND(imdb_rating),
+    COUNT(name)
+ FROM movies
+ GROUP BY 1
+ ORDER BY 1;
+
+-- the following queries are equivalent:
+SELECT category,
+   price,
+   AVG(downloads)
+FROM fake_apps
+GROUP BY category, price;
+
+SELECT category,
+   price,
+   AVG(downloads)
+FROM fake_apps
+GROUP BY 1, 2;
