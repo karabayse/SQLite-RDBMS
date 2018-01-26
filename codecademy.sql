@@ -308,3 +308,12 @@ SELECT category,
    AVG(downloads)
 FROM fake_apps
 GROUP BY 1, 2;
+
+
+-- HAVING
+SELECT year,
+  genre,
+  COUNT(name)
+FROM movies
+GROUP BY 1, 2
+HAVING COUNT(name) > 10
