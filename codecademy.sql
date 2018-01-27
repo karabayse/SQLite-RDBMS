@@ -317,3 +317,9 @@ SELECT year,
 FROM movies
 GROUP BY 1, 2
 HAVING COUNT(name) > 10
+
+SELECT price,
+   ROUND(AVG(downloads))
+FROM fake_apps
+GROUP BY price
+HAVING COUNT(*) > 9;
