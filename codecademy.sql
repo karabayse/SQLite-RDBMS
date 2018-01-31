@@ -330,11 +330,25 @@ HAVING COUNT(*) > 9;
 SELECT *
 FROM orders
 JOIN customers
-    ON orders.customer_id = customers.customer_id
+    ON orders.customer_id = customers.customer_id;
 
 -- select 'order_id' from 'orders' and 'customer_name' from 'customers'
 SELECT orders.order_id,
        customers.customer_name
 FROM orders
 JOIN customers
-    ON orders.customer_id = customers.customer_id
+    ON orders.customer_id = customers.customer_id;
+
+-- join 'orders' and 'subscriptions' and select all columns
+-- join on subscription_id
+SELECT *
+FROM orders
+JOIN subscriptions
+	ON orders.subscription_id = subscriptions.subscription_id;
+
+-- selects rows from the join where 'description' = 'Fashion Magazine'
+SELECT *
+FROM orders
+JOIN subscriptions
+	ON orders.subscription_id = subscriptions.subscription_id
+WHERE subscriptions.description = 'Fashion Magazine';
