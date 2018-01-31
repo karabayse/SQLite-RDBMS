@@ -323,3 +323,18 @@ SELECT price,
 FROM fake_apps
 GROUP BY price
 HAVING COUNT(*) > 9;
+
+
+-- JOIN
+-- combine 'orders' and 'customers'
+SELECT *
+FROM orders
+JOIN customers
+    ON orders.customer_id = customers.customer_id
+
+-- select 'order_id' from 'orders' and 'customer_name' from 'customers'
+SELECT orders.order_id,
+       customers.customer_name
+FROM orders
+JOIN customers
+    ON orders.customer_id = customers.customer_id
