@@ -359,3 +359,13 @@ SELECT *
 FROM table1
 LEFT JOIN table2
   ON table1.c2 = table2.c2
+
+SELECT *
+FROM newspaper
+LEFT JOIN online
+  ON newspaper.id = online.id;
+
+SELECT *
+FROM newspaper
+LEFT JOIN online
+  ON newspaper.id = online.id;
