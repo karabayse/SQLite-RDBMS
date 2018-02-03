@@ -369,3 +369,10 @@ SELECT *
 FROM newspaper
 LEFT JOIN online
   ON newspaper.id = online.id;
+
+
+-- PRIMARY KEY versus FOREIGN KEY
+SELECT *
+FROM classes
+JOIN students
+	ON classes.id = students.class_id;
