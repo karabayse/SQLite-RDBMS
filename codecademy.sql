@@ -403,3 +403,10 @@ WHERE id = 1;
 
 DELETE FROM friends
 WHERE id = 1;
+
+
+-- CROSS JOIN
+SELECT shirts.shirt_color,
+       pants.pant_color
+FROM shirts
+CROSS JOIN pants;
