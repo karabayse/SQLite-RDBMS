@@ -376,3 +376,30 @@ SELECT *
 FROM classes
 JOIN students
 	ON classes.id = students.class_id;
+
+
+-- CREATE TABLE
+CREATE TABLE friends (
+	id INT,
+  name VARCHAR,
+  birthday VARCHAR
+);
+
+INSERT INTO friends
+(name, birthday) VALUES ('Jane Doe', 'May 19th, 1993');
+
+INSERT INTO friends
+(name, name, name) VALUES ('John Doe', 'Jim Doe', 'June Doe');
+
+UPDATE friends
+SET name = 'Jane Smith'
+WHERE id = 1;
+
+ALTER TABLE friends ADD COLUMN email;
+
+UPDATE friends
+SET email = 'jdoe@example.com'
+WHERE id = 1;
+
+DELETE FROM friends
+WHERE id = 1;
