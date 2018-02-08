@@ -410,3 +410,17 @@ SELECT shirts.shirt_color,
        pants.pant_color
 FROM shirts
 CROSS JOIN pants;
+
+SELECT *
+FROM newspaper
+CROSS JOIN months
+WHERE start_month < month
+	AND end_month > month;
+
+SELECT months.month,
+  COUNT(*)
+FROM newspaper
+CROSS JOIN months
+WHERE start_month < month
+  AND end_month > month
+GROUP BY months.month;
