@@ -424,3 +424,17 @@ CROSS JOIN months
 WHERE start_month < month
   AND end_month > month
 GROUP BY months.month;
+
+
+-- UNION
+SELECT *
+FROM table1
+UNION
+SELECT *
+FROM table2;
+
+SELECT *
+FROM newspaper
+UNION
+SELECT *
+FROM online;
